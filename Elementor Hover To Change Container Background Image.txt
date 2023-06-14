@@ -1,0 +1,92 @@
+
+
+===================Content Show/Hide CSS===========================
+
+selector{
+    --text-position: -500px;
+    --heading-position: -50px;
+    --button-position: 70px;
+}
+selector, selector .content-card p, selector .content-card a, selector .content-card h2{
+    transition: .5s all ease-in-out;
+}
+selector .content-card p, selector .content-card a{
+    position: relative;
+    bottom: var(--text-position);
+}
+selector .content-card a{
+    transition: 0.5s all linear;
+    position: relative;
+    top: 500px;
+}
+selector .content-card:hover p, selector .content-card:hover a{
+    bottom: 0px;
+}
+selector .content-card:hover a{
+    top: var(--button-position);
+}
+selector .content-card h2{
+    position: relative;
+    bottom: var(--heading-position);
+}
+selector .content-card:hover h2{
+    bottom: 0px;
+}
+
+
+===================Image Changing JS Snippet===========================
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+var $ = jQuery;
+//Image One
+var ImgOne = "url(Your Image Link hear)";
+//Image Two
+var ImgTwo = "url(Your Image Link hear)";
+    $(document).ready(function(){
+        
+    $('#card-two').hover(function(){
+        $('#main-container').css("background-image", ImgOne)
+    }, function(){
+        $('#main-container').css("background-image", "")
+    });
+    
+    $('#card-three').hover(function(){
+        $('#main-container').css("background-image", ImgTwo)
+    }, function(){
+        $('#main-container').css("background-image", "")
+    })
+    
+    
+    })
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
